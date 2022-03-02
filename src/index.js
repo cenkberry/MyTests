@@ -9,9 +9,7 @@ const Page = document.getElementById('root');
 ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,Page
-);
-
+  </React.StrictMode>,Page);
 
 
 reportWebVitals();
