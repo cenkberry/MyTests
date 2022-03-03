@@ -55,5 +55,4 @@ export const Foods = [
     category: 'Dessert',
     price:'12.99'
   }
-  
 ];

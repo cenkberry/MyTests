@@ -12,17 +12,16 @@ class Menu extends Component{
      render(){
         const result = this.state.items.map( (item) => {
           return(
-             <div key={item.id} className="col-12 col-sm-6 bg-warning border border-dark text-center">
-                    <h1  className="mt-2">{item.name}</h1>
-                    <h3  className="mt-2">{item.category}</h3>
-                    <img className="images img-thumbnail rounded" src={item.image} alt="foodphotos" />
-                    <h3   className="mt-2 text-bold text-dark">{item.price}</h3>
+             <div key={item.id} className="col-12 col-sm-6 bg-warning border border-dark text-center my-2">
+                    <h2  className="mt-2">{item.name}</h2>
+                    <h4  className="mt-2">{item.category}</h4>
+                    <img className="img img-fluid images img-thumbnail rounded" src={item.image} alt="foodphotos" />
+                    <h4   className="mt-2">{item.price}</h4>
              </div>
           )
         });
-         
       return(
-           <div className="container-sm">
+           <div className="container-xl">
                 <div className="row">
                   {result}
                 </div>

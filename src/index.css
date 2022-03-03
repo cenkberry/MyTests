@@ -6,6 +6,7 @@
   border: 0;
   box-sizing: border-box;
   vertical-align: baseline;
+  font-size: 100%;
 }
 
 body {
@@ -13,6 +14,5 @@ body {
   font-size: 16px;
 }
 .images{
-  height: 300px;
-  width: 400px;
+  height: 15rem;
 }
