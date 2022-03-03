@@ -1,30 +1,41 @@
-import React, {useState} from 'react';
+import React from 'react';
+
+const myArray = 
+[
+  {id:1, name:"Cenk Berry"},
+  {id:2, name:"Rana Berry"},
+  {id:3, name:"Ahmet Altan"},
+  {id:4, name:"Osman Erbulak"}
+];
 
 export const Tester = () => {
   
-   const [Title,myfunc] = useState("Main Title");
+  const [people, setPeople] = React.useState(myArray);
 
-   const Changer = () => {
-     if(Title === "Main Title"){
-       myfunc("Now, I Changed!")
-     }
-     else{
-      myfunc("Main Title");
-     }
-   }
+  const removeItem = (id) =>{
+    let newArray = people.filter( (person)=> person.id !== id);
+    setPeople(newArray)
+  };
 
-
-   
   return(
-    <div className='col-sm-6 bg-warning'>
-      <div className="row p-4 text-center">
-          <h1>{Title}</h1>
-          <button
-          className="btn btn-info"
-          onClick={Changer}>
-          Change the Title
-          </button>
-     </div>
-    </div>
+     <>
+       {people.map( (person) =>{
+
+         const {id,name} = person;
+
+            return(
+                  <div key={id} className="col-6 text-center">
+                      <div className="item bg-warning m-2 p-2 rounded">
+                      <h4>{id}- {name}</h4>
+                      <button className="btn-info p-2" onClick={ ()=> removeItem(id) }>Clear</button>
+                      </div>
+                  </div>
+            )
+       })}
+            <div className="col-6 text-center">
+                  <button className="btn-info p-2" onClick={ ()=> setPeople([]) }>
+                  Clear Items!</button>
+            </div>
+    </>
   )
 };

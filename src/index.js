@@ -7,6 +7,7 @@ const Page = document.getElementById('root');
 
 ReactDOM.render(
 
+  <React.StrictMode>
   <Tester />
-  
+  </React.StrictMode>
   ,Page);
