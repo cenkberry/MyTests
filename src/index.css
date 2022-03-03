@@ -6,13 +6,9 @@
   border: 0;
   box-sizing: border-box;
   vertical-align: baseline;
-  font-size: 100%;
 }
 
 body {
   background: #529449;
   font-size: 16px;
-}
-.images{
-  height: 15rem;
 }
